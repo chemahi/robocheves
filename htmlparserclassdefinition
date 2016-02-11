@@ -1,0 +1,5 @@
+class MyHTMLParser(HTMLParser):
+	def handle_data(self, data):
+		if data not in string.lowercase:
+			print data
+
