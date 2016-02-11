@@ -1,0 +1,14 @@
+para la pg de heb (scrapy shell http://www.heb.com.mx/vinos-y-licores/cerveza.html)
+
+títulos de los artículos:
+response.xpath('''//div[@class = "product-info"]/h2[@class = "product-name"]/a/@title''').extract()
+
+links de los productos:
+response.xpath('''//div[@class = "product-info"]/h2[@class = "product-name"]/a/@href''').extract()  
+
+
+marca:
+response.xpath('''//div[@class = "product-info"]/span[@class = "marca-related"]/text()''').extract()
+
+precios:
+response.xpath('''//div[@class = "product-info"]/div[@class = "price-box"]/*/span[@class = "price"]/text()''').extract()
